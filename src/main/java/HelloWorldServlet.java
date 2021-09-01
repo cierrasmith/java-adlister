@@ -3,6 +3,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = "/hello")
 public class HelloWorldServlet extends HttpServlet {
@@ -10,16 +11,17 @@ public class HelloWorldServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
         res.setContentType("text/html");
 
-        String helloWorld = "Hello, World!";
-        System.out.println(helloWorld);
-        res.getWriter().println(helloWorld);
+//        String helloWorld = "Hello, World!";
+//        System.out.println(helloWorld);
+//        res.getWriter().println(helloWorld);
+
+        PrintWriter out = res.getWriter();
+        String name = req.getParameter("name");
+        if(name == null) {
+            out.println("<h1>Hello, World!</h1>");
+        } else {
+            out.println("<h1>Hello, " + name + "!</h1>");
+        }
     }
 
-    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        res.setContentType("text/html");
-
-        String firstName = req.getParameter("firstName");
-        System.out.println(firstName);
-        res.getWriter().println(firstName);
-    }
 }
