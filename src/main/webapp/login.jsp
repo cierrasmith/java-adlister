@@ -5,9 +5,10 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <title>Login</title>
 </head>
 <body>
+<jsp:include page="partials/navbar.jsp" />
 
 <form method="POST" action="/login.jsp">
     <label for="username">Username:</label>
@@ -25,44 +26,8 @@
         <%response.sendRedirect("/profile.jsp");%>
     </c:when>
 
-    </c:choose>
+</c:choose>
 
+<jsp:include page="partials/footer.jsp" />
 </body>
 </html>
-
-
-<%--<%! String[] cars = {"Volvo", "BMW", "Kia"}; %>--%>
-<%--<% request.setAttribute("userName", request.getParameter("name")); %>--%>
-<%--<% request.setAttribute("listOfCars", cars); %>--%>
-<%--<html>--%>
-<%--<head>--%>
-<%--    <title>Title</title>--%>
-<%--</head>--%>
-<%--<body>--%>
-
-<%--<c:choose>--%>
-
-<%--<c:when test="${userName == null}">--%>
-<%--<h1>Hello, Random User</h1>--%>
-<%--</c:when >--%>
-
-<%--<c:otherwise>--%>
-<%--<h1>Hello, ${userName}</h1>--%>
-
-
-<%--    &lt;%&ndash;        For each with p tags&ndash;%&gt;--%>
-<%--    &lt;%&ndash;        <c:forEach var="car" items="${listOfCars}" >&ndash;%&gt;--%>
-<%--    &lt;%&ndash;            <p>${car}</p>&ndash;%&gt;--%>
-<%--    &lt;%&ndash;        </c:forEach>&ndash;%&gt;--%>
-
-<%--    &lt;%&ndash;        How to use for each with a ul&ndash;%&gt;--%>
-<%--<ul>--%>
-<%--    <c:forEach var="car" items="${listOfCars}">--%>
-<%--        <li>${car}</li>--%>
-<%--    </c:forEach>--%>
-<%--</ul>--%>
-
-<%--</c:otherwise>--%>
-
-
-<%--</c:choose>--%>

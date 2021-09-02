@@ -1,16 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: cierrasmith
-  Date: 9/2/21
-  Time: 2:14 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title>Title</title>
-</head>
-<body>
-
-</body>
+<footer style="position: fixed; bottom: 0">
+    Thanks for visiting!
+</footer>
 </html>

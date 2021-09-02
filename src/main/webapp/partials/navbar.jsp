@@ -1,16 +1,10 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: cierrasmith
-  Date: 9/2/21
-  Time: 2:14 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+<nav style="text-align: right">
+    <a href=" ">Home</a>
+    <a href=" ">About</a>
+    <a href=" ">Profile</a>
+    <a href=" ">Contact Us</a>
+</nav>
 
-</body>
 </html>
