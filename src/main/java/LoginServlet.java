@@ -7,10 +7,11 @@ import java.io.IOException;
 
 @WebServlet(name = "LoginServlet", value = "/login")
 public class LoginServlet extends HttpServlet {
-    @Override
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    boolean wasLoginError = request.getParameter("error") != null;
+
+        boolean wasLoginError = request.getParameter("error") != null;
         request.setAttribute("error", wasLoginError);
         request.getRequestDispatcher("/login.jsp").forward(request, response);
     }
