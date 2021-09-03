@@ -9,10 +9,10 @@
 <body>
 <h1 style="text-align: center">Create Your Pizza Order</h1>
 <div class="container">
-<form action="/pizza.jsp" method="POST">
+<form method="POST" action="/pizza.jsp">
     <div class="form-group">
-        <label for="crustType">Select a Crust</label>
-        <select class="form-control" id="crustType">
+        <label for="crustType" >Select a Crust</label>
+        <select class="form-control" id="crustType" name="crustType">
             <option>Hand Tossed</option>
             <option>Thin Crust</option>
             <option>Chicago Deep Dish</option>
@@ -71,7 +71,7 @@
     <div class="form-row">
     <div class="form-group col-md-6">
         <label for="inputAddress">Delivery Address</label>
-        <input type="text" class="form-control" id="inputAddress">
+        <input type="text" class="form-control" id="inputAddress" name="inputAddress">
     </div>
     </div>
     <div class="form-row">
@@ -88,7 +88,7 @@
             <input type="text" class="form-control" id="inputZip">
         </div>
     </div>
-    <input type="submit" class="btn btn-primary btn-block" value="Place Order">
+    <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 </div>
 

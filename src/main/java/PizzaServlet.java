@@ -15,23 +15,26 @@ public class PizzaServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) {
 
-        String crust = request.getParameter("crustType");
-        String sauce = request.getParameter("sauceType");
-        String size = request.getParameter("pizzaSize");
-//        String toppings = request.getParameter("pizzaSize");
+//        String crust = request.getParameter("crustType");
+//        String sauce = request.getParameter("sauceType");
+//        String size = request.getParameter("pizzaSize");
+////        String toppings = request.getParameter("pizzaSize");
         String address = request.getParameter("inputAddress");
 
-        System.out.println(crust);
-        System.out.println(sauce);
-        System.out.println(size);
+//        System.out.println(crust);
+//        System.out.println(sauce);
+//        System.out.println(size);
         System.out.println(address);
+
+
     }
 
 
 
 }
+
 
 
 
