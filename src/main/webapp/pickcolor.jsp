@@ -4,12 +4,10 @@
     <title>Pick Color</title>
 </head>
 <body>
-<form method="POST" action="pickcolor">
-    <div class="form-group">
-        <label for="inputColor">Enter your favorite color</label>
-        <input type="text" class="form-control" id="inputColor" name="inputColor">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+<form method="POST" action="/pickcolor">
+        <label for="color">Enter your favorite color</label>
+        <input type="text" id="color" name="color">
+        <input type="submit" class="btn btn-primary" value="Submit">
 </form>
 
 </body>

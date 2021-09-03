@@ -4,7 +4,7 @@
     <title>View Color</title>
 </head>
 <body style="background-color: ${color}">
-
+<h1>You picked the color ${color}</h1>
 </body>
 
 </html>
