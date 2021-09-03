@@ -39,28 +39,28 @@
     <div class="form-check">
         <h3>Toppings</h3>
         <br>
-        <input class="form-check-input" type="checkbox" value="" id="pepperoni">
-        <label class="form-check-label" for="pepperoni">
+        <input id="pepperoni" name="toppings" type="checkbox">
+        <label for="pepperoni">
             Pepperoni
         </label>
     </div>
         <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="sausage">
-        <label class="form-check-label" for="sausage">
-            Sausage
-        </label>
+            <input id="sausage" name="toppings" type="checkbox">
+            <label for="sausage">
+                Sausage
+            </label>
         </div>
             <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="cheese">
-        <label class="form-check-label" for="cheese">
-            Cheese
-        </label>
+                <input id="mushroom" name="toppings" type="checkbox">
+                <label for="mushroom">
+                    Mushroom
+                </label>
             </div>
                 <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="mushrooms">
-        <label class="form-check-label" for="mushrooms">
-            Mushrooms
-        </label>
+                    <input id="cheese" name="toppings" type="checkbox">
+                    <label for="cheese">
+                        Cheese
+                    </label>
                 </div>
     <div class="form-row">
         <div class="form-group col-md-6">
