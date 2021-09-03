@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Arrays;
 
-@WebServlet(name = "PizzaServlet", value = "/pizza-order")
+@WebServlet(name = "PizzaServlet", urlPatterns = "/pizza-order")
 public class PizzaServlet extends HttpServlet {
 
     @Override
@@ -21,14 +21,14 @@ public class PizzaServlet extends HttpServlet {
         String crust = request.getParameter("crustType");
         String sauce = request.getParameter("sauceType");
         String size = request.getParameter("pizzaSize");
-        String address = request.getParameter("inputAddress");
+        String [] address = request.getParameterValues("inputAddress");
         String [] toppings = request.getParameterValues("toppings");
 
         System.out.println(crust);
         System.out.println(sauce);
         System.out.println(size);
         System.out.println(Arrays.toString(toppings));
-
+        System.out.println(Arrays.toString(address));
 
     }
 
