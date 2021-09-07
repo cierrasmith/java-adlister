@@ -4,19 +4,25 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "LoginServlet", value = "/ads")
+@WebServlet(name = "LoginServlet", value = "/login")
 public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        List<Ad> adList = DaoFactory.getAdsDao().all();
-
-        request.setAttribute("adListing", adList);
-        request.getRequestDispatcher("/ads/index.jsp").forward(request,response);
+        request.getRequestDispatcher("login.jsp").forward(request,response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        if (request.getMethod().equalsIgnoreCase("post")) {
+            String username = request.getParameter("username");
+            String password = request.getParameter("password");
+            if (username.equals("admin") && password.equals("password")) {
+                response.sendRedirect("/profile");
+            } else {
+                response.sendRedirect("/login");
+            }
+        }
     }
 }
