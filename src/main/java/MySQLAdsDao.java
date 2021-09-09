@@ -3,9 +3,12 @@ import com.mysql.jdbc.Driver;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MySQLAdsDao implements Ads{
+
+    List<Ad> adsList = new ArrayList<>();
 
     private Connection connection;
 
@@ -21,11 +24,14 @@ public class MySQLAdsDao implements Ads{
 
     @Override
     public List<Ad> all() {
-        return all();
+
+
+        return adsList;
     }
 
     @Override
     public Long insert(Ad ad) {
-        return null;
+        insert(new Ad(ad.getUserId(), ad.getTitle(), ad.getDescription()));
     }
+
 }
