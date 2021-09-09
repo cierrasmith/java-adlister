@@ -4,7 +4,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.SQLException;
+
 
 @WebServlet(name = "CreateAdServlet", urlPatterns = "/ads/create")
 public class CreateAdServlet extends HttpServlet {
@@ -19,12 +19,8 @@ public class CreateAdServlet extends HttpServlet {
             request.getParameter("title"),
             request.getParameter("description")
         );
-        try {
-            DaoFactory.getAdsDao().insert(ad);
-        } catch (SQLException throwables) {
-//            System.out.println("Can't add");
-            throwables.printStackTrace();
-        }
+
+        DaoFactory.getAdsDao().insert(ad);
         response.sendRedirect("/ads");
     }
 }

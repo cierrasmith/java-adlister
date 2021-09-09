@@ -16,7 +16,7 @@ CREATE TABLE ads (
                        title  VARCHAR(200) NOT NULL,
                        description VARCHAR(200) NOT NULL,
                        PRIMARY KEY (id),
-                       FOREIGN KEY(user_id) REFERENCES users(id)
+                       FOREIGN KEY (user_id) REFERENCES users (id)
 );
 
 describe ads;
